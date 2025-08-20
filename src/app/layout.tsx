@@ -25,10 +25,27 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+  className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-white`}
+>
+  {/* Navbar */}
+  <header className="flex justify-between items-center px-8 py-4 bg-gray-800">
+    <h1 className="text-xl font-bold">Vignam</h1>
+    <nav className="space-x-6">
+      <a href="#hero" className="hover:text-gray-400">Home</a>
+      <a href="#features" className="hover:text-gray-400">Features</a>
+      <a href="#video" className="hover:text-gray-400">Demo</a>
+    </nav>
+  </header>
+
+  {/* Page content */}
+  {children}
+
+  {/* Footer */}
+  <footer className="text-center py-6 bg-gray-800">
+    <p>© 2025 Vignam. All rights reserved.</p>
+  </footer>
+</body>
+
     </html>
   );
 }
